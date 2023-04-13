@@ -603,7 +603,8 @@ body {
   fill: var(--main-bg-color);
 }
 
-.button-send-subscribe:focus {
+.button-send-subscribe:focus,
+.button-send-subscribe:hover {
   background-color: var(--hover-focus-color);
 }
 

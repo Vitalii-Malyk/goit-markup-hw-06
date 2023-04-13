@@ -472,7 +472,7 @@ body {
   padding-top: 100px;
 }
 .section-footer .footer-soc-title {
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -527,7 +527,7 @@ body {
 }
 
 .footer-subscribe-title {
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -543,7 +543,7 @@ body {
   align-items: center;
   margin-top: 16px;
 }
-.Subscribe-field {
+.subscribe-field {
   display: flex;
 }
 
@@ -552,14 +552,14 @@ body {
   background-color: var(--second-color-text);
   width: 264px;
   height: 40px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--main-bg-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 8px;
 
   font-size: 12px;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-bg-color);
 }
 
 .footer-input::placeholder {
@@ -569,7 +569,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-bg-color);
 }
 
 .button-send-subscribe {
@@ -597,7 +597,9 @@ body {
 
 .foter-icon-email {
   position: absolute;
+  top: 50%;
   left: 405px;
+  transform: translateY(-50%);
   fill: var(--main-bg-color);
 }
 
@@ -720,7 +722,7 @@ body {
   transform: translateY(0);
 }
 
-/*?-------------------------------------- Модальне вікно ------------------------------*/
+/*!-------------------------------------- Модальне вікно ------------------------------*/
 
 .backdrop {
   position: fixed;
@@ -781,7 +783,7 @@ body {
 
 .modal .button-close-modal:hover,
 .modal .button-close-modal:focus {
-  fill: #ffffff;
+  fill: var(--main-bg-color);
   background-color: var(--hover-focus-color);
 }
 
@@ -830,7 +832,8 @@ body {
   display: block;
   position: absolute;
   left: 16px;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: currentColor;
   transition: fill var(--transition-main);
 }
@@ -838,7 +841,8 @@ body {
   display: block;
   position: absolute;
   left: 16px;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: currentColor;
   transition: fill var(--transition-main);
 }
@@ -900,6 +904,7 @@ label:focus-within .modal-textarea {
 .checkbox-field {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .checkbox-icon-wrap {
@@ -915,6 +920,11 @@ label:focus-within .modal-textarea {
   background-color: var(--second-bg-color);
   transition: background-color var(--transition-main),
     fill var(--transition-main), border var(--transition-main);
+}
+
+.checkbox-field:hover .checkbox-icon-wrap,
+.checkbox-field:focus-within .checkbox-icon-wrap {
+  border: 1px solid var(--hover-focus-color);
 }
 
 .checkbox:checked + .checkbox-icon-wrap {
@@ -934,13 +944,13 @@ label:focus-within .modal-textarea {
   height: 56px;
   padding: 16px 32px;
 
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  background: #4d5ae5;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
